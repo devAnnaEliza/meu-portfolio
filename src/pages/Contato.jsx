@@ -1,27 +1,27 @@
+import Navbar from "../components/Navbar";
+import SectionTitle from "../components/SectionTitle";
+import Footer from "../components/Footer";
+
 export default function Contato() {
   return (
-    <section className="contact-container">
-      <h1>Contato</h1>
+    <>
+      <Navbar />
 
-      <p>Caso queira entrar em contato comigo, aqui estão alguns links:</p>
+      <main>
+        <SectionTitle title="Contato" />
 
-      <ul>
-        <li>
-          <a href="mailto:seuemail@gmail.com" target="_blank">
-            📧 E-mail
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/devAnnaEliza" target="_blank">
-            🐙 GitHub
-          </a>
-        </li>
-        <li>
-          <a href="https://linkedin.com" target="_blank">
-            🔗 LinkedIn
-          </a>
-        </li>
-      </ul>
-    </section>
+        <p className="intro-text">
+          Quer falar comigo? Entre em contato pelos canais abaixo:
+        </p>
+
+        <ul className="contact-list">
+          <li>Email: seuemail@example.com</li>
+          <li>LinkedIn: https://linkedin.com/in/seuperfil</li>
+          <li>GitHub: https://github.com/devAnnaEliza</li>
+        </ul>
+      </main>
+
+      <Footer />
+    </>
   );
 }

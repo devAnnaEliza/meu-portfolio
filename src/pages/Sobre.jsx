@@ -1,23 +1,26 @@
+import Navbar from "../components/Navbar";
+import SectionTitle from "../components/SectionTitle";
+import Footer from "../components/Footer";
+
 export default function Sobre() {
   return (
-    <section className="about-container">
-      <h1>Sobre Mim</h1>
+    <>
+      <Navbar />
 
-      <p>
-        Meu nome é Anna Eliza, sou desenvolvedora full stack em formação,
-        com experiência em JavaScript, React, Python, FastAPI e MongoDB.
-      </p>
+      <main>
+        <SectionTitle title="Sobre Mim" />
 
-      <p>
-        Tenho facilidade com tecnologia, leitura e resolução de problemas.
-        Estou sempre estudando e buscando evoluir dentro da área de
-        desenvolvimento web e computação em nuvem.
-      </p>
+        <p className="intro-text">
+          Olá! Meu nome é Anna — Full Stack Dev.
+          Sou apaixonada por tecnologia, programação e construção de interfaces funcionais e modernas.
+        </p>
 
-      <p>
-        Neste portfólio você encontrará meus projetos, certificações e o 
-        que venho aprendendo ao longo da minha jornada.
-      </p>
-    </section>
+        <p className="intro-text">
+          Aqui você encontra um pouco mais sobre minha trajetória, habilidades e projetos.
+        </p>
+      </main>
+
+      <Footer />
+    </>
   );
 }

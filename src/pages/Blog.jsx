@@ -1,13 +1,21 @@
+import Navbar from "../components/Navbar";
+import SectionTitle from "../components/SectionTitle";
+import Footer from "../components/Footer";
+
 export default function Blog() {
   return (
-    <section className="blog-container">
-      <h1>Blog</h1>
-      <p>
-        Aqui futuramente você encontrará estudos, artigos, anotações,
-        projetos detalhados e aprendizados.  
-      </p>
+    <>
+      <Navbar />
 
-      <p>Ainda não há posts publicados.</p>
-    </section>
+      <main>
+        <SectionTitle title="Blog" />
+
+        <p className="intro-text">
+          Em breve você poderá ler artigos, dicas e conteúdos sobre desenvolvimento.
+        </p>
+      </main>
+
+      <Footer />
+    </>
   );
 }

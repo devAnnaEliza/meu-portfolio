@@ -1,35 +1,38 @@
+import Navbar from "../components/Navbar";
+import SectionTitle from "../components/SectionTitle";
 import ProjectCard from "../components/ProjectCard";
+import Footer from "../components/Footer";
 
-export default function Projetos() {
-  const projetos = [
-    {
-      id: 1,
-      titulo: "Projeto Exemplo",
-      descricao: "Descrição rápida do projeto para demonstração.",
-      link: "#"
-    },
-    {
-      id: 2,
-      titulo: "Meu Portfólio",
-      descricao: "Este próprio portfólio, criado com React + Vite.",
-      link: "#"
-    }
-  ];
-
+export default function Projects() {
   return (
-    <section className="projects-container">
-      <h1>Projetos</h1>
+    <>
+      <Navbar />
 
-      <div className="projects-grid">
-        {projetos.map((p) => (
+      <main>
+        <SectionTitle title="Meus Projetos" />
+
+        <div className="projects-grid">
           <ProjectCard
-            key={p.id}
-            titulo={p.titulo}
-            descricao={p.descricao}
-            link={p.link}
+            title="Projeto 1"
+            description="Descrição breve do projeto."
+            link="#"
           />
-        ))}
-      </div>
-    </section>
+
+          <ProjectCard
+            title="Projeto 2"
+            description="Descrição breve do projeto."
+            link="#"
+          />
+
+          <ProjectCard
+            title="Projeto 3"
+            description="Descrição breve do projeto."
+            link="#"
+          />
+        </div>
+      </main>
+
+      <Footer />
+    </>
   );
 }
