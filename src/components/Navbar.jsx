@@ -1,21 +1,63 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="nav-container">
+    <header className="navbar">
+      <div className="navbar-container">
 
-        <h1 className="nav-logo">Anna - Full Stack Dev</h1>
+        {/* Logo / Nome */}
+        <Link to="/" className="navbar-logo">
+          Anna - Full Stack Dev
+        </Link>
 
-        <ul className="nav-links">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/projetos">Projetos</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
-          <li><Link to="/sobre">Sobre</Link></li>
-          <li><Link to="/contato">Contato</Link></li>
-        </ul>
+        {/* Menu */}
+        <nav className="navbar-menu">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "nav-item active" : "nav-item"
+            }
+          >
+            Início
+          </NavLink>
 
+          <NavLink
+            to="/projetos"
+            className={({ isActive }) =>
+              isActive ? "nav-item active" : "nav-item"
+            }
+          >
+            Projetos
+          </NavLink>
+
+          <NavLink
+            to="/blog"
+            className={({ isActive }) =>
+              isActive ? "nav-item active" : "nav-item"
+            }
+          >
+            Blog
+          </NavLink>
+
+          <NavLink
+            to="/sobre"
+            className={({ isActive }) =>
+              isActive ? "nav-item active" : "nav-item"
+            }
+          >
+            Sobre
+          </NavLink>
+
+          <NavLink
+            to="/contato"
+            className={({ isActive }) =>
+              isActive ? "nav-item active" : "nav-item"
+            }
+          >
+            Contato
+          </NavLink>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }

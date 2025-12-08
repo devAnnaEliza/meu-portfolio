@@ -1,32 +1,25 @@
-export default function ProjectCard({ title, description, techs = [], link, repo }) {
+import PropTypes from "prop-types";
+
+export default function ProjectCard({ title, description, link }) {
   return (
-    <article className="project-card">
-      <header>
-        <h3>{title}</h3>
-      </header>
+    <div className="project-card">
+      <h3>{title}</h3>
+      <p>{description}</p>
 
-      <p className="project-description">{description}</p>
-
-      {techs.length > 0 && (
-        <ul className="tech-list" aria-label="Tecnologias">
-          {techs.map((t, i) => (
-            <li key={i} className="tech-item">{t}</li>
-          ))}
-        </ul>
-      )}
-
-      <div className="project-links">
-        {link && (
-          <a href={link} target="_blank" rel="noopener noreferrer" className="project-link">
-            Demo
-          </a>
-        )}
-        {repo && (
-          <a href={repo} target="_blank" rel="noopener noreferrer" className="project-link">
-            Repositório
-          </a>
-        )}
-      </div>
-    </article>
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="project-link"
+      >
+        Ver projeto
+      </a>
+    </div>
   );
 }
+
+ProjectCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired
+};

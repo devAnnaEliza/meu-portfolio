@@ -1,23 +1,11 @@
-import Navbar from "../components/Navbar";
-import Header from "../components/Header";
 import SectionTitle from "../components/SectionTitle";
-import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
-      <Header />
+    <div className="container">
+      <SectionTitle title="Início" />
 
-      <main>
-        <SectionTitle title="Bem-vindo ao meu Portfólio" />
-
-        <p className="intro-text">
-          Aqui você encontrará meus projetos, informações sobre mim e formas de contato.
-        </p>
-      </main>
-
-      <Footer />
-    </>
+      <p>Bem-vindo ao meu portfólio! Aqui você encontra meus projetos, blog e informações sobre mim.</p>
+    </div>
   );
 }

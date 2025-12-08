@@ -1,38 +1,25 @@
-import Navbar from "../components/Navbar";
 import SectionTitle from "../components/SectionTitle";
 import ProjectCard from "../components/ProjectCard";
-import Footer from "../components/Footer";
 
-export default function Projects() {
+export default function Projetos() {
   return (
-    <>
-      <Navbar />
+    <div className="container">
+      <SectionTitle title="Projetos" />
 
-      <main>
-        <SectionTitle title="Meus Projetos" />
+      <div className="project-list">
+        {/* Exemplo de cards — depois vamos substituir pelos reais */}
+        <ProjectCard
+          title="Projeto Exemplo 1"
+          description="Descrição breve do projeto."
+          link="https://github.com"
+        />
 
-        <div className="projects-grid">
-          <ProjectCard
-            title="Projeto 1"
-            description="Descrição breve do projeto."
-            link="#"
-          />
-
-          <ProjectCard
-            title="Projeto 2"
-            description="Descrição breve do projeto."
-            link="#"
-          />
-
-          <ProjectCard
-            title="Projeto 3"
-            description="Descrição breve do projeto."
-            link="#"
-          />
-        </div>
-      </main>
-
-      <Footer />
-    </>
+        <ProjectCard
+          title="Projeto Exemplo 2"
+          description="Descrição breve do projeto."
+          link="https://github.com"
+        />
+      </div>
+    </div>
   );
 }
