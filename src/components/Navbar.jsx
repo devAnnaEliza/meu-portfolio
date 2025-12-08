@@ -1,23 +1,19 @@
-import { NavLink } from "react-router-dom";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggler from "./ThemeToggle.jsx";
 
-export default function Navbar() {
+function Navbar() {
   return (
-    <header className="navbar">
-      <div className="navbar-container">
-        <NavLink to="/" className="navbar-logo">Anna - Full Stack Dev</NavLink>
-
-        <nav className="navbar-menu">
-          <NavLink to="/" className={({isActive}) => isActive ? "nav-item active" : "nav-item"}>Início</NavLink>
-          <NavLink to="/projetos" className={({isActive}) => isActive ? "nav-item active" : "nav-item"}>Projetos</NavLink>
-          <NavLink to="/blog" className={({isActive}) => isActive ? "nav-item active" : "nav-item"}>Blog</NavLink>
-          <NavLink to="/sobre" className={({isActive}) => isActive ? "nav-item active" : "nav-item"}>Sobre</NavLink>
-          <NavLink to="/contato" className={({isActive}) => isActive ? "nav-item active" : "nav-item"}>Contato</NavLink>
-
-          {/* Theme toggle */}
-          <ThemeToggle />
-        </nav>
+    <nav className="navbar">
+      <div className="navbar-logo">Anna - Full Stack Dev</div>
+      <div className="navbar-menu">
+        <a href="/">Home</a>
+        <a href="/projetos">Projetos</a>
+        <a href="/blog">Blog</a>
+        <a href="/sobre">Sobre</a>
+        <a href="/contato">Contato</a>
+        <ThemeToggler />
       </div>
-    </header>
+    </nav>
   );
 }
+
+export default Navbar;

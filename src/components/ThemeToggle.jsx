@@ -1,31 +1,33 @@
 import { useEffect, useState } from "react";
-import { moon, sunny } from "ionicons/icons";
-import { IonIcon } from "@ionic/react";
 
 function ThemeToggler() {
   const [theme, setTheme] = useState("light");
 
-  // carrega tema salvo ou identifica o tema do sistema
+  // Inicializa tema ao carregar
   useEffect(() => {
+    // Busca tema salvo
     const savedTheme = localStorage.getItem("theme");
 
     if (savedTheme) {
       setTheme(savedTheme);
       document.documentElement.classList.toggle("dark", savedTheme === "dark");
     } else {
-      const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const initialTheme = systemPrefersDark ? "dark" : "light";
-      setTheme(initialTheme);
-      document.documentElement.classList.toggle("dark", initialTheme === "dark");
+      // Detecta preferencia do sistema
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setTheme(prefersDark ? "dark" : "light");
+      document.documentElement.classList.toggle("dark", prefersDark);
     }
   }, []);
 
-  // alternar tema
+  // Alterna tema
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
 
+    // Aplica classe dark no HTML
     document.documentElement.classList.toggle("dark", newTheme === "dark");
+
+    // Salva no localStorage
     localStorage.setItem("theme", newTheme);
   };
 
@@ -41,9 +43,14 @@ function ThemeToggler() {
         fontSize: "1.5rem",
         display: "flex",
         alignItems: "center",
+        color: "var(--texto)"
       }}
     >
-      <IonIcon icon={theme === "light" ? moon : sunny} />
+      {theme === "light" ? (
+        <ion-icon name="moon-outline"></ion-icon>
+      ) : (
+        <ion-icon name="sunny-outline"></ion-icon>
+      )}
     </button>
   );
 }
