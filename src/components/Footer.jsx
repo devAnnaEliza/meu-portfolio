@@ -1,9 +1,12 @@
 export default function Footer() {
-  const year = new Date().getFullYear();
+  const ano = new Date().getFullYear();
 
   return (
     <footer className="footer">
-      <p>© {year} Anna – Full Stack Dev</p>
+      <div className="container footer-container">
+        <p>© {ano} Anna - Full Stack Dev</p>
+        <p className="small">Feito com ❤️ — disponível no GitHub</p>
+      </div>
     </footer>
   );
 }

@@ -1,13 +1,7 @@
-interface SectionTitleProps {
-  title: string;
-}
-
-const SectionTitle: React.FC<SectionTitleProps> = ({ title }) => {
+export default function SectionTitle({ title }) {
   return (
-    <h2 className="text-3xl font-bold text-center my-8">
-      {title}
-    </h2>
+    <div className="section-title-wrapper container">
+      <h2 className="section-title">{title}</h2>
+    </div>
   );
-};
-
-export default SectionTitle;
+}

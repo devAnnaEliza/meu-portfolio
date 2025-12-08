@@ -1,41 +1,32 @@
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  image?: string;
-  link?: string;
-}
-
-const ProjectCard: React.FC<ProjectCardProps> = ({
-  title,
-  description,
-  image,
-  link,
-}) => {
+export default function ProjectCard({ title, description, techs = [], link, repo }) {
   return (
-    <div className="border rounded-xl p-4 shadow-md bg-white">
-      {image && (
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-40 object-cover rounded-lg mb-4"
-        />
+    <article className="project-card">
+      <header>
+        <h3>{title}</h3>
+      </header>
+
+      <p className="project-description">{description}</p>
+
+      {techs.length > 0 && (
+        <ul className="tech-list" aria-label="Tecnologias">
+          {techs.map((t, i) => (
+            <li key={i} className="tech-item">{t}</li>
+          ))}
+        </ul>
       )}
 
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-
-      <p className="text-gray-700 mb-4">{description}</p>
-
-      {link && (
-        <a
-          href={link}
-          target="_blank"
-          className="text-blue-600 font-semibold underline"
-        >
-          Ver Projeto
-        </a>
-      )}
-    </div>
+      <div className="project-links">
+        {link && (
+          <a href={link} target="_blank" rel="noopener noreferrer" className="project-link">
+            Demo
+          </a>
+        )}
+        {repo && (
+          <a href={repo} target="_blank" rel="noopener noreferrer" className="project-link">
+            Repositório
+          </a>
+        )}
+      </div>
+    </article>
   );
-};
-
-export default ProjectCard;
+}
