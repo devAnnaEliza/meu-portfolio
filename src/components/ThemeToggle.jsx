@@ -1,51 +1,51 @@
 import { useEffect, useState } from "react";
+import { moon, sunny } from "ionicons/icons";
+import { IonIcon } from "@ionic/react";
 
-/**
- * ThemeToggle
- * - Persiste escolha em localStorage (key: "theme")
- * - Se usuário ainda não escolheu, usa prefers-color-scheme
- * - Define attribute data-theme no <html> para o CSS usar
- */
-export default function ThemeToggle() {
-  const STORAGE_KEY = "theme";
-  const [theme, setTheme] = useState(() => {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored === "light" || stored === "dark") return stored;
-      // fallback: system preference
-      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-      return prefersDark ? "dark" : "light";
-    } catch {
-      return "dark";
-    }
-  });
+function ThemeToggler() {
+  const [theme, setTheme] = useState("light");
 
+  // carrega tema salvo ou identifica o tema do sistema
   useEffect(() => {
-    // Apply to root (html)
-    document.documentElement.setAttribute("data-theme", theme);
-    try {
-      localStorage.setItem(STORAGE_KEY, theme);
-    } catch {}
-  }, [theme]);
+    const savedTheme = localStorage.getItem("theme");
 
-  function toggleTheme() {
-    setTheme((t) => (t === "dark" ? "light" : "dark"));
-  }
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.classList.toggle("dark", savedTheme === "dark");
+    } else {
+      const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const initialTheme = systemPrefersDark ? "dark" : "light";
+      setTheme(initialTheme);
+      document.documentElement.classList.toggle("dark", initialTheme === "dark");
+    }
+  }, []);
+
+  // alternar tema
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
+    localStorage.setItem("theme", newTheme);
+  };
 
   return (
     <button
-      aria-label="Alternar tema"
-      title={theme === "dark" ? "Ativar modo claro" : "Ativar modo escuro"}
-      className="theme-toggle-btn"
       onClick={toggleTheme}
+      aria-label="Alternar tema"
+      className="theme-button"
+      style={{
+        background: "transparent",
+        border: "none",
+        cursor: "pointer",
+        fontSize: "1.5rem",
+        display: "flex",
+        alignItems: "center",
+      }}
     >
-      {theme === "dark" ? (
-        // sun icon (light mode)
-        <ion-icon name="sunny-outline" aria-hidden="true"></ion-icon>
-      ) : (
-        // moon icon (dark mode)
-        <ion-icon name="moon-outline" aria-hidden="true"></ion-icon>
-      )}
+      <IonIcon icon={theme === "light" ? moon : sunny} />
     </button>
   );
 }
+
+export default ThemeToggler;
