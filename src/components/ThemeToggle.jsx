@@ -19,15 +19,15 @@ function ThemeToggler() {
     }
   }, []);
 
-  // Alterna tema
+  // alterna tema
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
 
-    // Aplica classe dark no HTML
+    // dark no HTML
     document.documentElement.classList.toggle("dark", newTheme === "dark");
 
-    // Salva no localStorage
+    // salva no localStorage
     localStorage.setItem("theme", newTheme);
   };
 
