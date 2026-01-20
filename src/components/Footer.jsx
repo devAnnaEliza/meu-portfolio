@@ -3,9 +3,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
 
-        <p className="footer-copy">
-          Anna — Full Stack Dev © {new Date().getFullYear()}
-        </p>
+        
 
         <div className="footer-links">
           <a
@@ -13,7 +11,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub
+            <ion-icon name="logo-github" style={{ fontSize: '1.7rem' }}></ion-icon>
           </a>
 
           <a
@@ -21,14 +19,16 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            LinkedIn
+            <ion-icon name="logo-linkedin" style={{ fontSize: '1.7rem' }}></ion-icon>
           </a>
 
           <a href="mailto:anna.email@exemplo.com">
-            Email
+            <ion-icon name="mail-outline" style={{ fontSize: '1.7rem' }}></ion-icon>
           </a>
         </div>
-
+        <p className="footer-copy">
+         © Anna Eliza  {new Date().getFullYear()} Licensed
+        </p>
       </div>
     </footer>
   );
