@@ -1,19 +1,42 @@
-import ThemeToggler from "./ThemeToggle.jsx";
+import { NavLink } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
+import { useLanguage } from "../context/LanguageContext";
 
-function Navbar() {
+import brFlag from "../assets/icons/br.svg";
+import usFlag from "../assets/icons/us.svg";
+
+
+export default function Navbar() {
+  const { language, toggleLanguage } = useLanguage();
+
+  const handleLanguageToggle = () => {
+    toggleLanguage(language === "pt" ? "en" : "pt");
+  };
+
   return (
     <nav className="navbar">
-      <div className="navbar-logo">Anna - Full Stack Dev</div>
+      <div className="navbar-logo">
+        Anna — Full Stack Dev
+      </div>
+
       <div className="navbar-menu">
-        <a href="/">Home</a>
-        <a href="/projetos">Projetos</a>
-        <a href="/blog">Blog</a>
-        <a href="/sobre">Sobre</a>
-        <a href="/contato">Contato</a>
-        <ThemeToggler />
+        <NavLink to="/">{language === "pt" ? "Início" : "Home"}</NavLink>
+        <NavLink to="/projetos">{language === "pt" ? "Projetos" : "Projects"}</NavLink>
+        <NavLink to="/sobre">{language === "pt" ? "Sobre" : "About"}</NavLink>
+        <NavLink to="/contato">{language === "pt" ? "Contato" : "Contact"}</NavLink>
+
+        {/* Idioma */}
+        <button
+          className="lang-toggle"
+          onClick={handleLanguageToggle}
+          aria-label="Alterar idioma"
+        >
+          {language === "pt" ? "🇺🇸" : "🇧🇷"}
+        </button>
+
+        {/* Tema */}
+        <ThemeToggle />
       </div>
     </nav>
   );
 }
-
-export default Navbar;
