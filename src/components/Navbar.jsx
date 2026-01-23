@@ -5,7 +5,6 @@ import { useLanguage } from "../context/LanguageContext";
 import brFlag from "../assets/icons/br.svg";
 import usFlag from "../assets/icons/us.svg";
 
-
 export default function Navbar() {
   const { language, toggleLanguage } = useLanguage();
 
@@ -25,16 +24,17 @@ export default function Navbar() {
         <NavLink to="/sobre">{language === "pt" ? "Sobre" : "About"}</NavLink>
         <NavLink to="/contato">{language === "pt" ? "Contato" : "Contact"}</NavLink>
 
-        {/* Idioma */}
         <button
           className="lang-toggle"
           onClick={handleLanguageToggle}
           aria-label="Alterar idioma"
         >
-          {language === "pt" ? "🇺🇸" : "🇧🇷"}
+          <img
+            src={language === "pt" ? usFlag : brFlag}
+            alt="Idioma"
+          />
         </button>
 
-        {/* Tema */}
         <ThemeToggle />
       </div>
     </nav>

@@ -1,26 +1,13 @@
-import { createContext, useContext, useState } from "react";
-import PropTypes from "prop-types";
+import { Outlet } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
-const LanguageContext = createContext();
-
-export function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState("pt");
-
-  function toggleLanguage(lang) {
-    setLanguage(lang);
-  }
-
+export default function Layout() {
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage }}>
-      {children}
-    </LanguageContext.Provider>
+    <>
+      <Navbar />
+      <main>
+        <Outlet />
+      </main>
+    </>
   );
-}
-
-LanguageProvider.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-export function useLanguage() {
-  return useContext(LanguageContext);
 }
