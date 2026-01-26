@@ -1,15 +1,7 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-
+import ReactDOM from "react-dom/client";
 import App from "./App";
-import { LanguageProvider } from "./context/LanguageContext";
-
 import "./styles/global.css";
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <LanguageProvider>
-      <App />
-    </LanguageProvider>
-  </StrictMode>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <App />
 );

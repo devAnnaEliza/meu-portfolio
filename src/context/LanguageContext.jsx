@@ -1,26 +1,27 @@
-import { createContext, useContext, useState } from "react";
-import PropTypes from "prop-types";
+//import { createContext, useContext, useState } from "react";
 
-const LanguageContext = createContext();
+//const LanguageContext = createContext();
 
-export function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState("pt");
+//export function LanguageProvider({ children }) {
+  //const [language, setLanguage] = useState("pt");
 
-  function toggleLanguage(lang) {
-    setLanguage(lang);
-  }
+  //function toggleLanguage() {
+    //setLanguage((prev) => (prev === "pt" ? "en" : "pt"));
+  //}
 
-  return (
-    <LanguageContext.Provider value={{ language, toggleLanguage }}>
-      {children}
-    </LanguageContext.Provider>
-  );
-}
+  //return (
+    //<LanguageContext.Provider value={{ language, toggleLanguage }}>
+      //{children}
+    //</LanguageContext.Provider>
+  //);
+//}
 
-LanguageProvider.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+//export function useLanguage() {
+  //const context = useContext(LanguageContext);
 
-export function useLanguage() {
-  return useContext(LanguageContext);
-}
+  //if (!context) {
+    //throw new Error("useLanguage must be used within a LanguageProvider");
+  //}
+
+  //return context;
+//}

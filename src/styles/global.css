@@ -314,3 +314,15 @@ footer {
 .language-button.active {
     opacity: 1;
 }
+
+.language-button {
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.language-button:hover {
+  transform: scale(1.2);
+}
