@@ -194,7 +194,7 @@ html.dark .navbar {
     background: var(--fundo-claro);
 }
 
-/* LANGUAGE TOGGLE */
+/* LANGUAGE TOGGLE 
 .lang-toggle {
   background: var(--fundo-claro);
   border: none;
@@ -234,7 +234,7 @@ html.dark .theme-button {
 
 .navbar .theme-button {
     margin-left: 1rem;
-}
+}*/
 
 /* FOOTER */
 footer {
@@ -289,7 +289,7 @@ footer {
 .mt-3 { margin-top: 1rem; }
 .mt-4 { margin-top: 1.5rem; }
 
-/* TROCA DE IDIOMA */
+/* TROCA DE IDIOMA 
 .language-switch {
     display: flex;
     align-items: center;
@@ -325,4 +325,67 @@ footer {
 
 .language-button:hover {
   transform: scale(1.2);
+}
+*/
+
+
+/* VISUAL DA HOME */
+
+/* =========================
+   HOME - HERO
+========================= */
+
+.home-hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+}
+
+.home-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.home-hero-subtitle {
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.home-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.home-hero-role {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--primaria);
+}
+
+.home-hero-text {
+  max-width: 520px;
+  margin-top: 0.6rem;
+  color: var(--texto-suave);
+}
+
+.home-hero-actions {
+  margin-top: 1.6rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Botão secundário */
+.btn-secondary {
+  background: transparent;
+  color: var(--primaria);
+  border: 1px solid var(--primaria);
+}
+
+.btn-secondary:hover {
+  background: var(--primaria);
+  color: #fff;
 }
