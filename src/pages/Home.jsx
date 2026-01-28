@@ -113,9 +113,13 @@ export default function Home() {
           é só me chamar.
         </p>
 
-        <a href="/contato" className="btn">
-          Entrar em contato
+        <a
+          href="mailto:annaelizadev@gmail.com"
+          className="btn secondary"
+        >
+          Fale comigo
         </a>
+
       </section>
 
     </main>
