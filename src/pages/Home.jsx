@@ -104,17 +104,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA FINAL */}
+      {/* CTA */}
       <section className="section text-center">
         <h2 className="section-title">Vamos conversar?</h2>
 
         <p className="mb-3">
-          Se você quiser falar sobre projetos, ideias ou apenas trocar uma ideia,
+          Se você quiser falar sobre projetos, oportunidades ou apenas trocar uma ideia,
           é só me chamar.
         </p>
 
         <a
-          href="mailto:annaelizadev@gmail.com"
+          href="mailto:annaelizadev@gmail.com?subeject=Contato%20via%20Portfólio"
           className="btn secondary"
         >
           Fale comigo

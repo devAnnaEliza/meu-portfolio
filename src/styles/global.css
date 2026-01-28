@@ -387,6 +387,29 @@ footer {
   color: #fff;
 }
 
+/* CTA HOME */
+.cta-section {
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  border-top: 1px solid var(--borda);
+}
+
+.cta-title {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.cta-text {
+  max-width: 520px;
+  margin: 0 auto 1.8rem;
+  color: var(--texto-suave);
+}
+
+.cta-btn {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+}
+
 
 /* VISUAL PROJETOS */
 .projects-grid {
@@ -459,7 +482,7 @@ footer {
 }
 
 
-/* VISUAL SOBRE */
+/* VISUAL SOBRE 
 .about-content {
   max-width: 700px;
 }
@@ -468,7 +491,7 @@ footer {
   color: var(--texto-suave);
 }
 
-/* SOBRE - GRID */
+/* SOBRE - GRID 
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -484,7 +507,7 @@ footer {
 }
 
 
-/* VISUAL CONTATO */
+/* VISUAL CONTATO 
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -512,3 +535,4 @@ footer {
 .contact-card:hover {
   transform: translateY(-4px);
 }
+*/
