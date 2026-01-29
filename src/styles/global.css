@@ -39,6 +39,7 @@ ul {
     list-style: none;
 }
 
+
 /* TEMAS */
 
 /* 🎨 TEMA LIGHT */
@@ -76,6 +77,7 @@ h1, h2, h3, h4 {
     font-weight: 600;
     color: var(--texto-destaque);
     letter-spacing: -0.5px;
+    line-height: 1.25;
 }
 
 h1 { font-size: 2.4rem; margin-bottom: 1rem; }
@@ -86,24 +88,29 @@ p, span, li {
     color: var(--texto);
     line-height: 1.6;
     font-size: 1rem;
+    max-width: 60ch;
 }
 
 /* CONTAINERS E SEÇÕES */
+
 .container {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1.5rem;
+  width: 100%;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
+
 .section {
-    margin: 4rem 0;
+    margin: 5.5rem 0;
 }
 
 .section-title {
     font-size: 1.8rem;
     font-weight: 600;
-    margin-bottom: 1.4rem;
+    margin-bottom: 3;
 }
 
 /* CARDS */
@@ -113,7 +120,7 @@ p, span, li {
     border-radius: var(--radius);
     border: 1px solid var(--borda);
     transition: var(--transicao);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    box-shadow: none;
 }
 
 .card:hover {
@@ -139,28 +146,27 @@ button:hover, .btn:hover {
 }
 
 /* NAVBAR */
+.navbar .container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
 .navbar {
     width: 100%;
-    padding: 1.2rem 2rem;
-    background: rgba(255,255,255,0.4);
-    border-bottom: 1px solid var(--borda);
-    backdrop-filter: blur(12px);
-    position: sticky;
+    padding: 2rem 0 0.2rem;
+    background: transparent;
+    border-bottom: none;
+    backdrop-filter: none;
+    position: relative;
     top: 0;
     z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: background 0.25s ease;
-}
-
-html.dark .navbar {
-    background: rgba(0,0,0,0.35);
-}
-
-.navbar-logo {
-    font-size: 1.2rem;
-    font-weight: 600;
 }
 
 .navbar-menu {
@@ -172,6 +178,16 @@ html.dark .navbar {
 .navbar-menu a {
     color: var(--texto-suave);
     transition: var(--transicao);
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar .container > :last-child {
+  position: absolute;
+  right: 0;
 }
 
 .navbar-menu a:hover {
@@ -238,18 +254,23 @@ html.dark .theme-button {
 
 /* FOOTER */
 footer {
-    margin-top: 4rem;
-    padding: 2rem;
-    text-align: center;
-    color: var(--texto-suave);
-    border-top: 1px solid var(--borda);
+  padding: 3rem 0 2rem;
+  margin-top: 6rem;
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 0.2rem;
 }
 
 .footer-links {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 1rem;
+  margin-top: 0.2rem;
 }
 
 .footer-links a {
@@ -388,27 +409,24 @@ footer {
 }
 
 /* CTA HOME */
-.cta-section {
+.home-cta {
+  margin: 6rem 0;
   text-align: center;
-  padding: 3.5rem 1.5rem;
-  border-top: 1px solid var(--borda);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.0rem;
 }
 
-.cta-title {
-  font-size: 2rem;
-  margin-bottom: 0.8rem;
-}
-
-.cta-text {
-  max-width: 520px;
-  margin: 0 auto 1.8rem;
+.home-cta p {
+  max-width: 420px;
   color: var(--texto-suave);
 }
 
-.cta-btn {
-  padding: 0.8rem 2rem;
-  font-size: 1rem;
+.home-cta .btn {
+  margin-top: 0.8rem;
 }
+
 
 
 /* VISUAL PROJETOS */

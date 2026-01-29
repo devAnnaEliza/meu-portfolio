@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-container">
+      <div className="container">
         <div className="footer-links">
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=annaelizadev@gmail.com"

@@ -7,12 +7,12 @@ export default function Home() {
       
       {/* HERO */}
       <section className="section">
-        <h1 className="mb-2">Anna Eliza</h1>
+        <h2 className="mb-2">Anna Eliza</h2>
 
-        <h2 className="mb-3">Full Stack Developer</h2>
+        <h3 className="mb-3">Full Stack Developer</h3>
 
         <p className="mb-4">
-          Construindo aplicações web modernas com foco em experiência,
+          Construo aplicações web modernas com foco em experiência,
           organização e código limpo.
         </p>
 
@@ -105,10 +105,10 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="section text-center">
-        <h2 className="section-title">Vamos conversar?</h2>
+      <section className="home-cta">
+        <h2>Vamos conversar?</h2>
 
-        <p className="mb-3">
+        <p>
           Se você quiser falar sobre projetos, oportunidades ou apenas trocar uma ideia,
           é só me chamar.
         </p>
