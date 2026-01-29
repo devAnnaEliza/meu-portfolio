@@ -21,9 +21,9 @@ export default function Home() {
             Ver projetos
           </Link>
 
-          <Link to="/contato" className="btn">
+          {/*<Link to="/contato" className="btn">
             Contato
-          </Link>
+          </Link>*/}
         </div>
       </section>
 
@@ -114,11 +114,14 @@ export default function Home() {
         </p>
 
         <a
-          href="mailto:annaelizadev@gmail.com?subeject=Contato%20via%20Portfólio"
-          className="btn secondary"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=annaelizadev@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn cta-btn"
         >
           Fale comigo
         </a>
+
 
       </section>
 

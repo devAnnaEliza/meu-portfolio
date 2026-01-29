@@ -3,7 +3,11 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-links">
-          <a href="mailto:annaelizadev@gmail.com">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=annaelizadev@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <ion-icon name="mail-outline" style={{ fontSize: '1.7rem' }}></ion-icon>
           </a>
           
