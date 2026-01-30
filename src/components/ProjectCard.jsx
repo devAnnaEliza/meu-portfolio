@@ -1,25 +1,20 @@
-import PropTypes from "prop-types";
+/* eslint-disable react/prop-types */
 
-export default function ProjectCard({ title, description, link }) {
+export default function ProjectCard({ title, description, tech, link }) {
   return (
-    <div className="project-card">
+    <article className="project-card">
       <h3>{title}</h3>
       <p>{description}</p>
 
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="project-link"
-      >
+      <ul>
+        {tech.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+
+      <a href={link} target="_blank" rel="noopener noreferrer">
         Ver projeto
       </a>
-    </div>
+    </article>
   );
 }
-
-ProjectCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired
-};
