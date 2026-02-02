@@ -1,16 +1,25 @@
-import projects from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
 
-export default function Projetos() {
-  return (
-    <section className="projects-page">
-      <h1>Projetos</h1>
+const projects = [
+  {
+    id: 1,
+    title: "Portfólio",
+    description: "Meu site pessoal",
+    tech: "React + CSS"
+  },
+];
 
-      <div className="projects-grid">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
-      </div>
+export default function Home() {
+  return (
+    <section>
+      {projects.map(project => (
+        <ProjectCard
+          key={project.id}
+          title={project.title}
+          description={project.description}
+          tech={project.tech}
+        />
+      ))}
     </section>
   );
 }
