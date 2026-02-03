@@ -5,7 +5,6 @@ export default function ProjectCard({ title, description, tech }) {
     <article className="project-card">
       <h3>{title}</h3>
       <p>{description}</p>
-
       <span>{tech}</span>
     </article>
   );
