@@ -44,7 +44,7 @@ ul {
 
 /* 🎨 TEMA LIGHT */
 :root {
-    --fundo: #ffffff;
+    --fundo: #f1f5f9;
     --fundo-claro: #f5f5f5;
     --card: #fafafa;
     --borda: #e5e5e5;
@@ -58,6 +58,9 @@ ul {
 
     --radius: 12px;
     --transicao: 0.25s ease;
+
+    --tag-bg: #e5e7eb;
+    --tag-text: #1e293b;
 }
 
 /* 🌙 TEMA DARK */
@@ -70,6 +73,9 @@ html.dark {
     --texto: #f2f2f2;
     --texto-suave: #c6c6c6;
     --texto-destaque: #ffffff;
+
+    --tag-bg: #000000;
+    --tag-text: #e5e7eb;
 }
 
 /* TIPOGRAFIA */
@@ -571,36 +577,17 @@ footer .container {
 
 /* Borda lateral por status */
 .project-card.finalizado {
-  background-color: #ffffff;
+  background-color: var(--card);
   border-left: 4px solid #22c55e;
 }
 
 .project-card.em-andamento {
-  background-color: #ffffff;
+  background-color: var(--card);
   border-left: 4px solid #facc15;
 }
 
 .project-card.pausado {
-  background-color: #ffffff;
-  border-left: 4px solid #ef4444;
-}
-
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Borda lateral por status */
-.project-card.finalizado {
-  border-left: 4px solid #22c55e;
-}
-
-.project-card.em-andamento {
-  border-left: 4px solid #facc15;
-}
-
-.project-card.pausado {
+  background-color: var(--card);
   border-left: 4px solid #ef4444;
 }
 
@@ -611,10 +598,16 @@ footer .container {
 }
 
 .tech-tag {
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
   font-size: 0.75rem;
-  background-color: #f1f5f9;
+  white-space: nowrap;
+}
+
+.tech-tag:hover {
+  transform: translateY(-4px);
 }
 
 .projects-legend {
@@ -628,15 +621,4 @@ footer .container {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-}
-
-/* Cards – correção light / dark */
-.project-card {
-  background-color: #ffffff;
-  color: #0f172a;
-}
-
-[data-theme="dark"] .project-card {
-  background-color: #0f172a;
-  color: #e5e7eb;
 }
