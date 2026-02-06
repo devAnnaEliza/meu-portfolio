@@ -1,18 +1,38 @@
 /* eslint-disable react/prop-types */
 
-export default function ProjectCard({ project }) {
+export function ProjectCard({ project }) {
   if (!project) return null;
 
   return (
-    <article className={`project-card status-${project.status}`}>
-      <h3>{project.title}</h3>
+    <div className={`project-card ${project.status}`}>
+      <div className="project-header">
+        <h2>{project.title}</h2>
+        <span className={`status-dot ${project.status}`} />
+      </div>
+
       <p>{project.description}</p>
 
-      <ul className="tech-list">
-        {project.technologies.map((tech) => (
-          <li key={tech}>{tech}</li>
+      <div className="project-techs">
+        {project.techs?.map((tech) => (
+          <span key={tech} className="tech-tag">
+            {tech}
+          </span>
         ))}
-      </ul>
-    </article>
+      </div>
+
+      <div className="project-links">
+        {project.demo && (
+          <a href={project.demo} target="_blank" rel="noreferrer">
+            Demo
+          </a>
+        )}
+
+        {project.github && (
+          <a href={project.github} target="_blank" rel="noreferrer">
+            Código
+          </a>
+        )}
+      </div>
+    </div>
   );
 }
