@@ -549,15 +549,15 @@ footer .container {
   border-radius: 50%;
 }
 
-.finalizado {
+.status-dot.finalizado {
   background-color: #22c55e;
 }
 
-.em-andamento {
+.status-dot.em-andamento {
   background-color: #facc15;
 }
 
-.pausado {
+.status-dot.pausado {
   background-color: #ef4444;
 }
 

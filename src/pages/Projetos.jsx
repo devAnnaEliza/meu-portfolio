@@ -5,7 +5,7 @@ export default function Projetos() {
   return (
     <main className="page">
       <section className="container">
-        <h1>Projetos</h1>
+        <h2>Projetos</h2>
 
         <div className="projects-legend">
           <span>

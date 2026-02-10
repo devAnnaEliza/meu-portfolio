@@ -6,8 +6,7 @@ export function ProjectCard({ project }) {
   return (
     <div className={`project-card ${project.status}`}>
       <div className="project-header">
-        <h2>{project.title}</h2>
-        <span className={`status-dot ${project.status}`} />
+        <h3>{project.title}</h3>
       </div>
 
       <p>{project.description}</p>
@@ -22,13 +21,13 @@ export function ProjectCard({ project }) {
 
       <div className="project-links">
         {project.demo && (
-          <a href={project.demo} target="_blank" rel="noreferrer">
+          <a href={project.demo} target="_blank" rel="noopener noreferrer">
             Demo
           </a>
         )}
 
         {project.github && (
-          <a href={project.github} target="_blank" rel="noreferrer">
+          <a href={project.github} target="_blank" rel="noopener noreferrer">
             Código
           </a>
         )}
