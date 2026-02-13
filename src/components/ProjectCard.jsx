@@ -21,13 +21,21 @@ export function ProjectCard({ project }) {
 
       <div className="project-links">
         {project.demo && (
-          <a href={project.demo} target="_blank" rel="noopener noreferrer">
+          <a 
+            href={project.demo} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
             Demo
           </a>
         )}
 
         {project.github && (
-          <a href={project.github} target="_blank" rel="noopener noreferrer">
+          <a 
+            href={project.github} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
             Repositório
           </a>
         )}

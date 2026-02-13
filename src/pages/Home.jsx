@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ProjectCard } from "../components/ProjectCard";
+import { projects } from "../data/projects";
 
 export default function Home() {
   return (
@@ -53,20 +54,15 @@ export default function Home() {
             gap: "1.5rem",
           }}>
 
-          <ProjectCard
-            title="Nome do Projeto 1"
-            description="Descrição curta do projeto, explicando o objetivo principal."
-          />
+          {projects.slice(0, 2).map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
 
-          <ProjectCard
-            title="Nome do Projeto 2"
-            description="Descrição curta do projeto, destacando a solução criada."
-          />
         </div>
 
       </section>
 
-      {/* STACK */}
+      {/* STACKS */}
       <section className="section">
         <h2 className="section-title">Tecnologias</h2>
 
@@ -101,6 +97,14 @@ export default function Home() {
           <div className="card text-center">
             <p>MongoDB</p>
           </div>
+
+          <div className="card text-center">
+            <p>Java</p>
+          </div>
+
+          <div className="card text-center">
+            <p>TypeScript</p>
+          </div>
         </div>
       </section>
 
@@ -121,7 +125,6 @@ export default function Home() {
         >
           Fale comigo
         </a>
-
 
       </section>
 
