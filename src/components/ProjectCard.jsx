@@ -28,7 +28,7 @@ export function ProjectCard({ project }) {
 
         {project.github && (
           <a href={project.github} target="_blank" rel="noopener noreferrer">
-            Código
+            Repositório
           </a>
         )}
       </div>

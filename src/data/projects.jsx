@@ -20,7 +20,7 @@ export const projects = [
   {
     id: 3,
     title: "Controle Financeiro",
-    description: "Aplicação simples de controle financeiro desenvolvida para microempreendedores.",
+    description: "Amostra de aplicação simples para controle financeiro desenvolvida para microempreendedores.",
     status: "finalizado",
     techs: ["Python", "Pandas"],
     demo: "",
