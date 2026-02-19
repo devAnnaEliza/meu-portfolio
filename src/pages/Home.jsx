@@ -8,24 +8,11 @@ export default function Home() {
       
       {/* HERO */}
       <section className="section">
-        <h2 className="mb-2">Anna Eliza</h2>
-
-        <h3 className="mb-3">Full Stack Developer</h3>
-
+        <h1 className="mb-2">Anna Eliza</h1>
         <p className="mb-4">
           Construo aplicações web modernas com foco em experiência,
           organização e código limpo.
         </p>
-
-        <div style={{ display: "flex", gap: "1rem" }}>
-          <Link to="/projetos" className="btn">
-            Ver projetos
-          </Link>
-
-          {/*<Link to="/contato" className="btn">
-            Contato
-          </Link>*/}
-        </div>
       </section>
 
       {/* PROJETOS EM DESTAQUE */}
@@ -40,7 +27,7 @@ export default function Home() {
             gap: "1rem",
           }}
         >
-          <h2 className="section-title">Projetos em destaque</h2>
+          <h3 className="section-title">Projetos em destaque</h3>
 
           <Link to="/projetos" className="btn">
             Ver todos
