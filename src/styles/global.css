@@ -433,38 +433,6 @@ footer .container {
 }
 
 
-
-/* VISUAL CONTATO 
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-}
-
-.contact-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
-  text-align: center;
-  transition: var(--transicao);
-}
-
-.contact-card ion-icon {
-  font-size: 2rem;
-  color: var(--primaria);
-}
-
-.contact-card span {
-  font-weight: 500;
-}
-
-.contact-card:hover {
-  transform: translateY(-4px);
-}
-*/
-
-
 /* VISUAL PROJETOS (HOME|PAGE) */
 .page {
   min-height: calc(100vh - var(--navbar-height, 0px));
@@ -571,4 +539,39 @@ footer .container {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+
+
+/* VISUAL SOBRE */
+
+.sobre {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.sobre-container {
+  max-width: 720px;
+  width: 100%;
+}
+
+/* Micro título */
+.sobre-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+}
+
+/* Texto */
+.sobre-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4b5563;
 }

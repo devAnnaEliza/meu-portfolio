@@ -1,42 +1,34 @@
 export default function Sobre() {
   return (
-    <main className="page">
-      <section className="container">
-        <h2 className="section-title">Sobre</h2>
+    <section className="sobre">
+      <div className="sobre-container">
 
-        <p className="about-intro">
-          Sou desenvolvedora Full Stack em formação, com foco na construção
-          de aplicações web organizadas, escaláveis e centradas na experiência
-          do usuário. Busco evoluir constantemente através de projetos práticos
-          e estudo direcionado.
-        </p>
+        <h3 className="sobre-label">SOBRE</h3>
 
-        <div className="about-grid">
-          <div className="card">
-            <h3>Como eu penso</h3>
-            <p>
-              Antes de escrever código, procuro entender profundamente o problema.
-              Acredito que boas soluções começam com clareza, simplicidade e estrutura.
-            </p>
-          </div>
+        
 
-          <div className="card">
-            <h3>Como eu desenvolvo</h3>
-            <p>
-              Trabalho com foco em componentização, reutilização e organização.
-              Valorizo código limpo, legível e de fácil manutenção.
-            </p>
-          </div>
+        <div className="sobre-texto">
+          <p>
+            Sou movida por lógica e pela necessidade de entender o que está por trás das coisas.
+            Não me interessa apenas fazer funcionar — quero saber por que funciona.
+          </p>
 
-          <div className="card">
-            <h3>O que estou construindo</h3>
-            <p>
-              Atualmente desenvolvo aplicações com React no frontend, 
-              evoluo meus conhecimentos em backend e análise de dados com Python e SQL.
-            </p>
-          </div>
+          <p>
+            Tenho mais prática com interfaces, mas meu objetivo é projetar sistemas completos.
+            Gosto de testar cada detalhe e ver desde um botão simples até uma estrutura maior
+            funcionando como deveria.
+          </p>
+
+          <p>
+            Estou construindo minha carreira com intenção. Aprendo constantemente,
+            mesmo quando sinto que ainda sei pouco. Prefiro evoluir com consistência
+            do que buscar atalhos.
+          </p>
         </div>
-      </section>
-    </main>
+
+        <p className="sobre-assinatura">— Anna Eliza</p>
+
+      </div>
+    </section>
   );
 }
