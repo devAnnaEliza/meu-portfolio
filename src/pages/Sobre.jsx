@@ -3,9 +3,7 @@ export default function Sobre() {
     <section className="sobre">
       <div className="sobre-container">
 
-        <h3 className="sobre-label">SOBRE</h3>
-
-        
+        <h2 className="sobre-titulo">Sobre</h2>
 
         <div className="sobre-texto">
           <p>
@@ -25,8 +23,6 @@ export default function Sobre() {
             do que buscar atalhos.
           </p>
         </div>
-
-        <p className="sobre-assinatura">— Anna Eliza</p>
 
       </div>
     </section>

@@ -61,7 +61,10 @@ ul {
 
     --tag-bg: #e5e7eb;
     --tag-text: #1e293b;
-}
+
+    --font-sans: "Inter", system-ui, sans-serif;
+    --font-serif: "Playfair Display", serif;
+  }
 
 /* 🌙 TEMA DARK */
 html.dark {
@@ -555,24 +558,26 @@ footer .container {
 }
 
 .sobre-container {
-  max-width: 720px;
+  max-width: 680px;
   width: 100%;
 }
 
-/* Micro título */
-.sobre-label {
-  font-size: 0.75rem;
-  letter-spacing: 0.3em;
+/* Título minimalista */
+.sobre-titulo {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
   color: #9ca3af;
-  margin-bottom: 1.5rem;
 }
 
-/* Texto */
+/* Texto mais editorial */
 .sobre-texto {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #4b5563;
+  gap: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #374151;
 }
