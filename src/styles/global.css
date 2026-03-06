@@ -98,7 +98,6 @@ p, span, li {
     color: var(--texto);
     line-height: 1.6;
     font-size: 1rem;
-    max-width: 60ch;
 }
 
 /* CONTAINERS E SEÇÕES */
@@ -119,7 +118,7 @@ p, span, li {
 .section-title {
     font-size: 1.8rem;
     font-weight: 600;
-    margin-bottom: 3;
+    margin-bottom: 3rem;
 }
 
 /* CARDS */
@@ -547,38 +546,31 @@ footer .container {
 
 
 
-
 /* VISUAL SOBRE */
 
 .sobre {
-  min-height: 100vh;
+  min-height: calc(100vh - 120px);
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0 2rem;
 }
 
-.sobre-container {
-  max-width: 680px;
-  width: 100%;
-}
-
-/* Título minimalista */
 .sobre-titulo {
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   margin-bottom: 3rem;
-  color: #9ca3af;
+  color: var(--texto-suave);
 }
 
-/* Texto mais editorial */
 .sobre-texto {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   font-size: 1.1rem;
   line-height: 1.9;
-  color: #374151;
+  color: var(--texto);
+  border-left: 2px solid var(--borda);
+  padding-left: 1.5rem;
 }
+

@@ -1,7 +1,7 @@
 export default function Sobre() {
   return (
     <section className="sobre">
-      <div className="sobre-container">
+      <div className="container">
 
         <h2 className="sobre-titulo">Sobre</h2>
 
