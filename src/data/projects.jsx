@@ -3,8 +3,8 @@ export const projects = [
     id: 1,
     title: "Portfólio Profissional",
     description: "Meu portfólio pessoal desenvolvido em React.",
-    status: "finalizado",
-    image: "/public/images/projects/portfolio/cover.png",
+    status: "manutencao",
+    image: "/images/projects/portfolio/cover.webp",
     techs: ["React", "CSS", "Vite"],
     demo: "",
     github: "https://github.com/devAnnaEliza/meu-portfolio"
@@ -14,6 +14,7 @@ export const projects = [
     title: "Posicionados - Site teste",
     description: "Site institucional para grupo de jovens cristãos.",
     status: "em-andamento",
+    image: "/images/projects/portfolio/cover.webp",
     techs: ["HTML", "CSS", "JavaScript"],
     demo: "https://devannaeliza.github.io/posicionadosteste/",
     github: "https://github.com/devAnnaEliza/posicionadosteste"

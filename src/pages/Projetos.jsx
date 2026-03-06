@@ -18,6 +18,9 @@ export default function Projetos() {
             <span>
               <span className="status-dot pausado" /> Pausado
             </span>
+            <span>
+              <span className="status-dot manutencao" /> Manuntenção
+            </span>
           </div>
 
           <div className="projects-grid">
@@ -25,7 +28,7 @@ export default function Projetos() {
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
-          
+
         </div>
       </section>
     </main>

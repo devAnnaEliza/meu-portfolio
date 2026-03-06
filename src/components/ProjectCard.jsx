@@ -11,6 +11,7 @@ export function ProjectCard({ project }) {
           src={project.image}
           alt={project.title}
           className="project-image"
+          loading="lazy"
         />
       )}
       
