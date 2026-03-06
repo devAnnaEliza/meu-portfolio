@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 
-export function ProjectCard({ project }) {
+import React from 'react';
+
+export const ProjectCard = React.memo(function ProjectCard({ project }) {
   if (!project) return null;
 
   return (
@@ -34,8 +36,7 @@ export function ProjectCard({ project }) {
           <a 
             href={project.demo} 
             target="_blank" 
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">          
             Demo
           </a>
         )}
@@ -44,12 +45,12 @@ export function ProjectCard({ project }) {
           <a 
             href={project.github} 
             target="_blank" 
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">          
             Repositório
           </a>
         )}
       </div>
+      
     </div>
   );
-}
+});
