@@ -118,7 +118,7 @@ p, span, li {
 .section-title {
     font-size: 1.8rem;
     font-weight: 600;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 /* CARDS */
@@ -465,6 +465,7 @@ footer .container {
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
+  display: block;
 }
 
 .project-header {

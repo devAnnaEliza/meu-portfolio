@@ -6,7 +6,7 @@ export default function Projetos() {
     <main className="page">
       <section>
         <div className="container">
-          <h2>Projetos</h2>
+          <h2 className="section-title">Projetos</h2>
 
           <div className="projects-legend">
             <span>
