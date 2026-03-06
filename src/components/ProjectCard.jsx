@@ -5,6 +5,15 @@ export function ProjectCard({ project }) {
 
   return (
     <div className={`project-card ${project.status}`}>
+
+      {project.image && (
+        <img
+          src={project.image}
+          alt={project.title}
+          className="project-image"
+        />
+      )}
+      
       <div className="project-header">
         <h3>{project.title}</h3>
       </div>
