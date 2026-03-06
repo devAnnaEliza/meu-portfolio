@@ -51,7 +51,7 @@ export default function Home() {
 
       {/* STACKS */}
       <section className="section">
-        <h2 className="section-title">Tecnologias</h2>
+        <h2 className="section-title">Stacks</h2>
 
         <div
           style={{
@@ -78,7 +78,15 @@ export default function Home() {
           </div>
 
           <div className="card text-center">
-            <p>Node.js</p>
+            <p>Tailwind</p>
+          </div>
+
+          <div className="card text-center">
+            <p>Python</p>
+          </div>
+
+          <div className="card text-center">
+            <p>Pandas</p>
           </div>
 
           <div className="card text-center">
@@ -91,6 +99,10 @@ export default function Home() {
 
           <div className="card text-center">
             <p>TypeScript</p>
+          </div>
+
+          <div className="card text-center">
+            <p>Node.js</p>
           </div>
         </div>
       </section>
