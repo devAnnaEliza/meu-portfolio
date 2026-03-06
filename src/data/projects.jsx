@@ -4,6 +4,7 @@ export const projects = [
     title: "Portfólio Profissional",
     description: "Meu portfólio pessoal desenvolvido em React.",
     status: "finalizado",
+    image: "/public/images/projects/portfolio/cover.png",
     techs: ["React", "CSS", "Vite"],
     demo: "",
     github: "https://github.com/devAnnaEliza/meu-portfolio"

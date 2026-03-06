@@ -4,25 +4,28 @@ import { ProjectCard } from "../components/ProjectCard";
 export default function Projetos() {
   return (
     <main className="page">
-      <section className="container">
-        <h2>Projetos</h2>
+      <section>
+        <div className="container">
+          <h2>Projetos</h2>
 
-        <div className="projects-legend">
-          <span>
-            <span className="status-dot finalizado" /> Finalizado
-          </span>
-          <span>
-            <span className="status-dot em-andamento" /> Em andamento
-          </span>
-          <span>
-            <span className="status-dot pausado" /> Pausado
-          </span>
-        </div>
+          <div className="projects-legend">
+            <span>
+              <span className="status-dot finalizado" /> Finalizado
+            </span>
+            <span>
+              <span className="status-dot em-andamento" /> Em andamento
+            </span>
+            <span>
+              <span className="status-dot pausado" /> Pausado
+            </span>
+          </div>
 
-        <div className="projects-grid">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
+          <div className="projects-grid">
+            {projects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+          
         </div>
       </section>
     </main>
