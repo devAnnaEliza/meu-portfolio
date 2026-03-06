@@ -17,7 +17,7 @@ html, body {
 }
 
 body {
-    font-family: "Inter", system-ui, sans-serif;
+    font-family: var(--font-sans);
     background: var(--fundo);
     color: var(--texto);
     -webkit-font-smoothing: antialiased;
@@ -83,7 +83,8 @@ html.dark {
 
 /* TIPOGRAFIA */
 h1, h2, h3, h4 {
-    font-weight: 600;
+    font-family: var(--font-serif);
+    font-weight: 500;
     color: var(--texto-destaque);
     letter-spacing: -0.5px;
     line-height: 1.25;
