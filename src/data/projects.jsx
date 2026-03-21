@@ -26,7 +26,7 @@ export const projects = [
     ],
     video: "/public/videos/projects/posicionados_site/demo.mp4",
     techs: ["HTML", "CSS", "JavaScript"],
-    demo: "https://devannaeliza.github.io/posicionadosteste/",
+    demo: "https://posicionados-site.vercel.app/",
     github: "https://github.com/devAnnaEliza/posicionadosteste"
   },
   {
