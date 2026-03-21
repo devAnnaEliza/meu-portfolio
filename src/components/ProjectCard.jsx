@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
-
-import React from 'react';
+import React from "react";
+import { StatusIcon } from "./StatusIcon";
 
 export const ProjectCard = React.memo(function ProjectCard({ project }) {
   if (!project) return null;
 
   return (
-    <div className={`project-card ${project.status}`}>
+    <div className={`project-card ${project.status} reveal`}>
 
       {project.image && (
         <img
@@ -16,9 +16,12 @@ export const ProjectCard = React.memo(function ProjectCard({ project }) {
           loading="lazy"
         />
       )}
-      
+
       <div className="project-header">
         <h3>{project.title}</h3>
+        <span className="status-icon">
+          <StatusIcon status={project.status} />
+        </span>
       </div>
 
       <p>{project.description}</p>
@@ -33,24 +36,17 @@ export const ProjectCard = React.memo(function ProjectCard({ project }) {
 
       <div className="project-links">
         {project.demo && (
-          <a 
-            href={project.demo} 
-            target="_blank" 
-            rel="noopener noreferrer">          
+          <a href={project.demo} target="_blank" rel="noopener noreferrer">
             Demo
           </a>
         )}
-
         {project.github && (
-          <a 
-            href={project.github} 
-            target="_blank" 
-            rel="noopener noreferrer">          
+          <a href={project.github} target="_blank" rel="noopener noreferrer">
             Repositório
           </a>
         )}
       </div>
-      
+
     </div>
   );
 });

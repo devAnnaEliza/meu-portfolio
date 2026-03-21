@@ -4,17 +4,21 @@ export const projects = [
     title: "Portfólio Profissional",
     description: "Meu portfólio pessoal desenvolvido em React.",
     status: "manutencao",
+    featured: true,
     image: "/images/projects/portfolio/cover.webp",
+    video: "",
     techs: ["React", "CSS", "Vite"],
     demo: "",
     github: "https://github.com/devAnnaEliza/meu-portfolio"
-  }, 
+  },
   {
     id: 2,
     title: "Posicionados - Site teste",
     description: "Site institucional para grupo de jovens cristãos.",
     status: "em-andamento",
+    featured: true,
     image: "/images/projects/portfolio/cover.webp",
+    video: "",
     techs: ["HTML", "CSS", "JavaScript"],
     demo: "https://devannaeliza.github.io/posicionadosteste/",
     github: "https://github.com/devAnnaEliza/posicionadosteste"
@@ -24,6 +28,9 @@ export const projects = [
     title: "Controle Financeiro",
     description: "Amostra de aplicação simples para controle financeiro desenvolvida para microempreendedores.",
     status: "finalizado",
+    featured: false,
+    image: "",
+    video: "",
     techs: ["Python", "Pandas"],
     demo: "",
     github: "https://github.com/devAnnaEliza/controlefinanceiro"
@@ -33,6 +40,9 @@ export const projects = [
     title: "Afinador de Instrumentos",
     description: "Aplicação para auxiliar na afinação de instrumentos de percussão.",
     status: "pausado",
+    featured: false,
+    image: "",
+    video: "",
     techs: [],
     demo: "",
     github: ""
@@ -42,6 +52,9 @@ export const projects = [
     title: "Gerenciamento de Ferramentas",
     description: "Aplicação para gerenciamento de equipamento audiovisual desenvolvida em conjunto com colegas durante a graduação.",
     status: "finalizado",
+    featured: false,
+    image: "",
+    video: "",
     techs: ["Python"],
     demo: "",
     github: "https://github.com/Dev-Team-04/Sistema-de-Gerenciamento-de-Ferramentas"

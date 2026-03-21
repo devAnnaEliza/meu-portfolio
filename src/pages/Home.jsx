@@ -1,132 +1,192 @@
-import { Link } from "react-router-dom";
+/* eslint-disable react/jsx-no-comment-textnodes */
+import { useState } from "react";
 import { ProjectCard } from "../components/ProjectCard";
+import { StatusLegend } from "../components/StatusIcon";
 import { projects } from "../data/projects";
+import { useReveal } from "../hooks/useReveal";
+
+const stackGroups = [
+  {
+    label: "front-end",
+    type: "front",
+    items: ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Tailwind", ],
+  },
+  {
+    label: "back-end & dados",
+    type: "back",
+    items: ["Python", "FastAPI", "Node.js", "Java", "MongoDB", "Pandas"],
+  },
+  {
+    label: "ferramentas",
+    type: "tools",
+    items: ["Git", "GitHub", "Vite"],
+  },
+  {
+    label: "cloud & deploy",
+    type: "cloud",
+    items: ["AWS"],
+  },
+];
 
 export default function Home() {
+  useReveal();
+  const [expanded, setExpanded] = useState(false);
+
+  const featured = projects.filter((p) => p.featured);
+  const visibleProjects = expanded ? projects : featured;
+
   return (
     <main className="container">
-      
       {/* HERO */}
-      <section className="section">
-        <h1 className="mb-2">Anna Eliza</h1>
-        <p className="mb-4">
-          Construo aplicações web modernas com foco em experiência,
-          organização e código limpo.
-        </p>
+      <section id="inicio" className="home-hero">
+        <div className="home-hero-content">
+          <span className="home-hero-role hero-anim hero-anim-1">
+            full stack developer
+          </span>
+
+          <h1 className="home-hero-name hero-anim hero-anim-2">
+            anna <em>eliza.</em>
+            
+          </h1>
+
+          <div className="home-hero-meta hero-anim hero-anim-3">
+            <div className="home-hero-left">
+              <p className="home-hero-text">
+                Construo aplicações web modernas com foco em experiência,
+                organização e código limpo.
+              </p>
+              <div className="home-hero-links">
+                <a 
+                  href="https://mail.google.com/mail/?view=cm&to=annaelizadev@gmail.com&su=Oportunidade%20de%20trabalho&body=Ol%C3%A1%2C%20Anna%20Eliza!%20Estou%20entrando%20em%20contato%20a%20respeito%20de%20uma%20oportunidade."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Email"
+                >
+                  <ion-icon name="mail-outline"></ion-icon>
+                </a>
+                <a href="https://github.com/devAnnaEliza" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="https://linkedin.com/in/annaelizadev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </div>
+            </div>
+            <div className="home-hero-right">
+              <span className="home-hero-scroll">scroll ↓</span>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* PROJETOS EM DESTAQUE */}
-      <section className="section">
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: "1.5rem",
-            flexWrap: "wrap",
-            gap: "1rem",
-          }}
-        >
-          <h3 className="section-title">Projetos em destaque</h3>
+      {/* PROJETOS */}
+      <section id="projetos" className="section">
+        <span className="section-marker reveal">// projetos</span>
 
-          <Link to="/projetos" className="btn">
-            Ver todos
-          </Link>
-        </div>
+        <StatusLegend />
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "1.5rem",
-          }}>
-
-          {projects.slice(0, 2).map((project) => (
+        <div className="projects-grid reveal-group">
+          {visibleProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
-
         </div>
 
+        <div className="projects-expand">
+          <button
+            className="btn-expand"
+            onClick={() => setExpanded((prev) => !prev)}
+          >
+            {expanded ? "ver menos" : "ver todos"}
+          </button>
+        </div>
       </section>
 
       {/* STACKS */}
-      <section className="section">
-        <h2 className="section-title">Stacks</h2>
+      <section id="stacks" className="section">
+        <span className="section-marker reveal">// stacks</span>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))",
-            gap: "1.5rem",
-            marginTop: "1.5rem",
-          }}
-        >
-          <div className="card text-center">
-            <p>HTML</p>
-          </div>
-
-          <div className="card text-center">
-            <p>CSS</p>
-          </div>
-
-          <div className="card text-center">
-            <p>JavaScript</p>
-          </div>
-
-          <div className="card text-center">
-            <p>React</p>
-          </div>
-
-          <div className="card text-center">
-            <p>Tailwind</p>
-          </div>
-
-          <div className="card text-center">
-            <p>Python</p>
-          </div>
-
-          <div className="card text-center">
-            <p>Pandas</p>
-          </div>
-
-          <div className="card text-center">
-            <p>MongoDB</p>
-          </div>
-
-          <div className="card text-center">
-            <p>Java</p>
-          </div>
-
-          <div className="card text-center">
-            <p>TypeScript</p>
-          </div>
-
-          <div className="card text-center">
-            <p>Node.js</p>
-          </div>
+        <div className="stacks-wrapper reveal">
+          {stackGroups.map((group) => (
+            <div key={group.type} className="stack-group">
+              <span className={`stack-group-label ${group.type}`}>
+                {group.label}
+              </span>
+              <div className="stack-badges">
+                {group.items.map((item) => (
+                  <span key={item} className={`stack-badge ${group.type}`}>
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="home-cta">
-        <h2>Vamos conversar?</h2>
+      {/* SOBRE */}
+      <section id="sobre" className="section sobre">
+        <div className="sobre-layout">
+          <div>
+            <span className="section-marker reveal">// sobre</span>
+            <div className="sobre-texto reveal">
+              <p>
+                Sou movida por lógica e pela necessidade de entender o que está
+                por trás das coisas. Não me interessa apenas fazer funcionar —
+                quero saber <span className="destaque">por que funciona.</span>
+              </p>
+              <p>
+                Tenho mais prática com{" "}
+                <span className="inline-tag">interfaces</span>, mas meu objetivo
+                é projetar sistemas completos. Gosto de testar cada detalhe e ver
+                desde um botão simples até uma estrutura maior funcionando como
+                deveria.
+              </p>
+              <p>
+                Estou construindo minha carreira com intenção. Aprendo
+                constantemente, mesmo quando sinto que ainda sei pouco. Prefiro
+                evoluir com consistência do que buscar atalhos.
+              </p>
+              <p>
+                Fora do código, o dia tem{" "}
+                <span className="inline-tag">música</span> — que também faço, na
+                bateria — leituras, um bom true crime, games e — sem negociação —
+                o <span className="inline-tag">Vasco.</span>
+              </p>
+            </div>
+          </div>
 
-        <p>
-          Se você quiser falar sobre projetos, oportunidades ou apenas trocar uma ideia,
-          é só me chamar.
-        </p>
-
-        <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=annaelizadev@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn cta-btn"
-        >
-          Fale comigo
-        </a>
-
+          <aside className="sobre-aside reveal">
+            <div className="hobbie-item">
+              <span className="hobbie-icon">♪</span>
+              <span className="hobbie-label">música & bateria</span>
+            </div>
+            <div className="hobbie-item">
+              <span className="hobbie-icon">◎</span>
+              <span className="hobbie-label">leitura & escrita</span>
+            </div>
+            <div className="hobbie-item">
+              <span className="hobbie-icon">▶</span>
+              <span className="hobbie-label">filmes & séries</span>
+            </div>
+            <div className="hobbie-item">
+              <span className="hobbie-icon">◈</span>
+              <span className="hobbie-label">true crime</span>
+            </div>
+            <div className="hobbie-item">
+              <span className="hobbie-icon">◉</span>
+              <span className="hobbie-label">games</span>
+            </div>
+            <div className="hobbie-item">
+              <span className="hobbie-icon">〜</span>
+              <span className="hobbie-label">praia</span>
+            </div>
+            <div className="hobbie-item destaque">
+              <span className="hobbie-icon">⬡</span>
+              <span className="hobbie-label">Vasco da Gama</span>
+            </div>
+          </aside>
+        </div>
       </section>
-
     </main>
   );
 }

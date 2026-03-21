@@ -1,26 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./layouts/Layout";
-
 import Home from "./pages/Home";
-import Projetos from "./pages/Projetos";
-import Blog from "./pages/Blog";
-import Sobre from "./pages/Sobre";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/projetos" element={<Projetos />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/sobre" element={<Sobre />} />
         </Route>
-
-        <Route path="*" element={<h1>Página não encontrada</h1>} />
-
+        <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
