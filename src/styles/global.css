@@ -834,6 +834,46 @@ html.dark .hobbie-item.destaque .hobbie-label {
 }
 
 
+/* OVERLAY EM CONSTRUÇÃO */
+
+/* WRAPPER DA SEÇÃO */
+.blur-section-wrapper {
+  position: relative;
+}
+
+/* CONTEÚDO (NÃO ALTERA LAYOUT) */
+.blur-section-content {
+  
+}
+
+/* OVERLAY COM BLUR */
+.blur-section-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  backdrop-filter: blur(4px);
+  z-index: 5;
+}
+
+/* CARD */
+.blur-card {
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  background: var(--card);
+  border: 1px solid var(--borda);
+  color: var(--texto-suave);
+}
+
+
 /* ANIMAÇÕES */
 .fade-in {
   animation: fadeIn 0.4s ease forwards;

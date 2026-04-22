@@ -79,114 +79,129 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROJETOS */}
-      <section id="projetos" className="section">
-        <span className="section-marker reveal">// projetos</span>
+      <div className="blur-section-wrapper">
 
-        <StatusLegend />
+        <div className="blur-section-content">
 
-        <div className="projects-grid reveal-group">
-          {visibleProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
 
-        <div className="projects-expand">
-          <button
-            className="btn-expand"
-            onClick={() => setExpanded((prev) => !prev)}
-          >
-            {expanded ? "ver menos" : "ver todos"}
-          </button>
-        </div>
-      </section>
+            {/* PROJETOS */}
+            <section id="projetos" className="section">
+              <span className="section-marker reveal">// projetos</span>
 
-      {/* STACKS */}
-      <section id="stacks" className="section">
-        <span className="section-marker reveal">// stacks</span>
+              <StatusLegend />
 
-        <div className="stacks-wrapper reveal">
-          {stackGroups.map((group) => (
-            <div key={group.type} className="stack-group">
-              <span className={`stack-group-label ${group.type}`}>
-                {group.label}
-              </span>
-              <div className="stack-badges">
-                {group.items.map((item) => (
-                  <span key={item} className={`stack-badge ${group.type}`}>
-                    {item}
-                  </span>
+              <div className="projects-grid reveal-group">
+                {visibleProjects.map((project) => (
+                  <ProjectCard key={project.id} project={project} />
                 ))}
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
-      {/* SOBRE */}
-      <section id="sobre" className="section sobre">
-        <div className="sobre-layout">
-          <div>
-            <span className="section-marker reveal">// sobre</span>
-            <div className="sobre-texto reveal">
-              <p>
-                Sou movida por lógica e pela necessidade de entender o que está
-                por trás das coisas. Não me interessa apenas fazer funcionar —
-                quero saber <span className="destaque">por que funciona.</span>
-              </p>
-              <p>
-                Tenho mais prática com{" "}
-                <span className="inline-tag">interfaces</span>, mas meu objetivo
-                é projetar sistemas completos. Gosto de testar cada detalhe e ver
-                desde um botão simples até uma estrutura maior funcionando como
-                deveria.
-              </p>
-              <p>
-                Estou construindo minha carreira com intenção. Aprendo
-                constantemente, mesmo quando sinto que ainda sei pouco. Prefiro
-                evoluir com consistência do que buscar atalhos.
-              </p>
-              <p>
-                Fora do código, o dia tem{" "}
-                <span className="inline-tag">música</span> — que também faço, na
-                bateria — leituras, um bom true crime, games e — sem negociação —
-                o <span className="inline-tag">Vasco.</span>
-              </p>
-            </div>
-          </div>
+              <div className="projects-expand">
+                <button
+                  className="btn-expand"
+                  onClick={() => setExpanded((prev) => !prev)}
+                >
+                  {expanded ? "ver menos" : "ver todos"}
+                </button>
+              </div>
+            </section>
 
-          <aside className="sobre-aside reveal">
-            <div className="hobbie-item">
-              <span className="hobbie-icon">♪</span>
-              <span className="hobbie-label">música & bateria</span>
-            </div>
-            <div className="hobbie-item">
-              <span className="hobbie-icon">◎</span>
-              <span className="hobbie-label">leitura & escrita</span>
-            </div>
-            <div className="hobbie-item">
-              <span className="hobbie-icon">▶</span>
-              <span className="hobbie-label">filmes & séries</span>
-            </div>
-            <div className="hobbie-item">
-              <span className="hobbie-icon">◈</span>
-              <span className="hobbie-label">true crime</span>
-            </div>
-            <div className="hobbie-item">
-              <span className="hobbie-icon">◉</span>
-              <span className="hobbie-label">games</span>
-            </div>
-            <div className="hobbie-item">
-              <span className="hobbie-icon">〜</span>
-              <span className="hobbie-label">praia</span>
-            </div>
-            <div className="hobbie-item destaque">
-              <span className="hobbie-icon">⬡</span>
-              <span className="hobbie-label">Vasco da Gama</span>
-            </div>
-          </aside>
+            {/* STACKS */}
+            <section id="stacks" className="section">
+              <span className="section-marker reveal">// stacks</span>
+
+              <div className="stacks-wrapper reveal">
+                {stackGroups.map((group) => (
+                  <div key={group.type} className="stack-group">
+                    <span className={`stack-group-label ${group.type}`}>
+                      {group.label}
+                    </span>
+                    <div className="stack-badges">
+                      {group.items.map((item) => (
+                        <span key={item} className={`stack-badge ${group.type}`}>
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* SOBRE */}
+            <section id="sobre" className="section sobre">
+              <div className="sobre-layout">
+                <div>
+                  <span className="section-marker reveal">// sobre</span>
+                  <div className="sobre-texto reveal">
+                    <p>
+                      Sou movida por lógica e pela necessidade de entender o que está
+                      por trás das coisas. Não me interessa apenas fazer funcionar —
+                      quero saber <span className="destaque">por que funciona.</span>
+                    </p>
+                    <p>
+                      Tenho mais prática com{" "}
+                      <span className="inline-tag">interfaces</span>, mas meu objetivo
+                      é projetar sistemas completos. Gosto de testar cada detalhe e ver
+                      desde um botão simples até uma estrutura maior funcionando como
+                      deveria.
+                    </p>
+                    <p>
+                      Estou construindo minha carreira com intenção. Aprendo
+                      constantemente, mesmo quando sinto que ainda sei pouco. Prefiro
+                      evoluir com consistência do que buscar atalhos.
+                    </p>
+                    <p>
+                      Fora do código, o dia tem{" "}
+                      <span className="inline-tag">música</span> — que também faço, na
+                      bateria — leituras, um bom true crime, games e — sem negociação —
+                      o <span className="inline-tag">Vasco.</span>
+                    </p>
+                  </div>
+                </div>
+
+                <aside className="sobre-aside reveal">
+                  <div className="hobbie-item">
+                    <span className="hobbie-icon">♪</span>
+                    <span className="hobbie-label">música & bateria</span>
+                  </div>
+                  <div className="hobbie-item">
+                    <span className="hobbie-icon">◎</span>
+                    <span className="hobbie-label">leitura & escrita</span>
+                  </div>
+                  <div className="hobbie-item">
+                    <span className="hobbie-icon">▶</span>
+                    <span className="hobbie-label">filmes & séries</span>
+                  </div>
+                  <div className="hobbie-item">
+                    <span className="hobbie-icon">◈</span>
+                    <span className="hobbie-label">true crime</span>
+                  </div>
+                  <div className="hobbie-item">
+                    <span className="hobbie-icon">◉</span>
+                    <span className="hobbie-label">games</span>
+                  </div>
+                  <div className="hobbie-item">
+                    <span className="hobbie-icon">〜</span>
+                    <span className="hobbie-label">praia</span>
+                  </div>
+                  <div className="hobbie-item destaque">
+                    <span className="hobbie-icon">⬡</span>
+                    <span className="hobbie-label">Vasco da Gama</span>
+                  </div>
+                </aside>
+              </div>
+            </section>
+          
         </div>
-      </section>
+
+        <div className="blur-section-overlay">
+          <div className="blur-card">Em manutenção ⚠️</div>
+        </div>
+
+      </div>
+
     </main>
   );
 }
+
